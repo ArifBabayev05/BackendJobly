@@ -1,0 +1,5 @@
+/Users/imac/Desktop/BackendJobly/BackendJobly/Business/obj/Debug/netcoreapp3.1/Business.csproj.AssemblyReference.cache
+/Users/imac/Desktop/BackendJobly/BackendJobly/Business/obj/Debug/netcoreapp3.1/Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/imac/Desktop/BackendJobly/BackendJobly/Business/obj/Debug/netcoreapp3.1/Business.AssemblyInfoInputs.cache
+/Users/imac/Desktop/BackendJobly/BackendJobly/Business/obj/Debug/netcoreapp3.1/Business.AssemblyInfo.cs
+/Users/imac/Desktop/BackendJobly/BackendJobly/Business/obj/Debug/netcoreapp3.1/Business.csproj.CoreCompileInputs.cache
