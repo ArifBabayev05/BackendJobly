@@ -14,10 +14,10 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        //public IDataResult<List<Category>> GetList()
-        //{
-        //    return new SuccessDataResult<List<Category>>(_categoryDal.GetList().ToList());
-        //}
+        public IDataResult<List<Category>> GetList()
+        {
+            return new SuccessDataResult<List<Category>>(_categoryDal.GetList().ToList());
+        }
     }
 }
 
