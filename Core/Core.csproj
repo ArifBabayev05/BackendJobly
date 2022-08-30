@@ -12,6 +12,10 @@
     <None Remove="DataAccess\EntityFramework\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Utilities\Results\" />
+    <None Remove="Utilities\Security\" />
+    <None Remove="Utilities\Security\Encyption\" />
+    <None Remove="Utilities\Security\Hashing\" />
+    <None Remove="Utilities\Security\Jwt\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
@@ -20,6 +24,10 @@
     <Folder Include="Utilities\" />
     <Folder Include="DataAccess\EntityFramework\" />
     <Folder Include="Utilities\Results\" />
+    <Folder Include="Utilities\Security\" />
+    <Folder Include="Utilities\Security\Encyption\" />
+    <Folder Include="Utilities\Security\Hashing\" />
+    <Folder Include="Utilities\Security\Jwt\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
