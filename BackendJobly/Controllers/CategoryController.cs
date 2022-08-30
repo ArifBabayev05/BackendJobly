@@ -1,6 +1,7 @@
 ﻿using System;
 using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackendJobly.Controllers
@@ -30,6 +31,7 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
+        [Authorize(Roles ="Admin")]
         public IActionResult Add(Category category)
         {
             var result = _categoryService.Add(category);

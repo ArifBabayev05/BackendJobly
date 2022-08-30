@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SMKEvkhJ3QUvHUgVAq21lycI3gQhcKViu7hBVXAUJChslK1fFMUR5U3qN/j+oY9AxYdm74J7WfgUoJWHrYntmQ==",
+  "dgSpecHash": "pNVAi1MKc1CQ6Lclykk7HtrVK1UXrwKhgysjFq7M3GaQ2ztmikwNq7DFOHUwaHD4skypCJlLJnj4N+PetF/U2w==",
   "success": true,
-  "projectFilePath": "/Users/imac/Desktop/BackendJobly/BackendJobly/BackendJobly/BackendJobly.csproj",
+  "projectFilePath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/BackendJobly/BackendJobly.csproj",
   "expectedPackageFiles": [
     "/Users/imac/.nuget/packages/autofac/6.4.0/autofac.6.4.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

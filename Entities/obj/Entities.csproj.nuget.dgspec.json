@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/imac/Desktop/BackendJobly/BackendJobly/Entities/Entities.csproj": {}
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj": {}
   },
   "projects": {
-    "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj": {
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj",
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj",
         "packagesPath": "/Users/imac/.nuget/packages/",
-        "outputPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/obj/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/imac/.nuget/NuGet/NuGet.Config"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "/Users/imac/Desktop/BackendJobly/BackendJobly/Entities/Entities.csproj": {
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/imac/Desktop/BackendJobly/BackendJobly/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Entities/Entities.csproj",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj",
         "packagesPath": "/Users/imac/.nuget/packages/",
-        "outputPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Entities/obj/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/imac/.nuget/NuGet/NuGet.Config"
@@ -93,8 +93,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj": {
-                "projectPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj"
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj"
               }
             }
           }
