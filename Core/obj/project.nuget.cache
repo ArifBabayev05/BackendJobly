@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Fz8VLgVeBVXf62dRcvjWlS155Za7bot+SaJwxTHaMKgeV1EruLrLRtPUay/LoWksNcHea9LK7kQOKQrjJESnSg==",
+  "dgSpecHash": "Bkpp96rt8VTeBzrG/z7oMYFHs9TXM4BpFdSM0JWJl9Zns1g8c0hyiHKV81mg1cTwtFfwJfShg6IXtFu9t/KVMg==",
   "success": true,
   "projectFilePath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj",
   "expectedPackageFiles": [
@@ -22,11 +22,13 @@
     "/Users/imac/.nuget/packages/microsoft.extensions.options/3.1.26/microsoft.extensions.options.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.extensions.primitives/3.1.26/microsoft.extensions.primitives.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.abstractions/6.22.1/microsoft.identitymodel.abstractions.6.22.1.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.22.1/microsoft.identitymodel.jsonwebtokens.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.logging/6.22.1/microsoft.identitymodel.logging.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.tokens/6.22.1/microsoft.identitymodel.tokens.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "/Users/imac/.nuget/packages/system.identitymodel.tokens.jwt/6.22.1/system.identitymodel.tokens.jwt.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
