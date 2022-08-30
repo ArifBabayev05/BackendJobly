@@ -16,6 +16,7 @@
     <None Remove="Utilities\Security\Encyption\" />
     <None Remove="Utilities\Security\Hashing\" />
     <None Remove="Utilities\Security\Jwt\" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
@@ -31,5 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.22.1" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UEAEZ+9clx7QREYxkfG76YN1xw0Ivkg4P8xgF7oQ//8qfWW+msc9bXeAq/6vTH2dByXCS14EUA6NZqyozlMHDA==",
+  "dgSpecHash": "VhTuJEw0zz6Pq+mAMsOouZSBYyh/pt6Faqp6d8Xkm1We7YpH/uhQhKFZIzaSpbwq0JdB1S3kHc3mJJOFMPIhTg==",
   "success": true,
   "projectFilePath": "/Users/imac/Desktop/BackendJobly/BackendJobly/BackendJobly/BackendJobly.csproj",
   "expectedPackageFiles": [
@@ -29,11 +29,12 @@
     "/Users/imac/.nuget/packages/microsoft.extensions.options/3.1.26/microsoft.extensions.options.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.extensions.primitives/3.1.26/microsoft.extensions.primitives.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identity.client/3.0.8/microsoft.identity.client.3.0.8.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.abstractions/6.22.1/microsoft.identitymodel.abstractions.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.jsonwebtokens/5.5.0/microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
-    "/Users/imac/.nuget/packages/microsoft.identitymodel.logging/5.5.0/microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.logging/6.22.1/microsoft.identitymodel.logging.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.protocols/5.5.0/microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/5.5.0/microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
-    "/Users/imac/.nuget/packages/microsoft.identitymodel.tokens/5.5.0/microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.tokens/6.22.1/microsoft.identitymodel.tokens.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WHpePhNhVpYEENjKeCI1Q3yKqLGpwLYJbEmekFnfJJnxzUUVXhlM0QHG24vYlxowm4AhOyJTVeJR871rOvOrlw==",
+  "dgSpecHash": "SqC622dsZyq9PkUzHboyTXmIHWzw+MszPBi0xsUl/BnfE2Ft7iwY7XsJKCzRjm1YuNT6tB/OLmqoWkgXuk3VNw==",
   "success": true,
   "projectFilePath": "/Users/imac/Desktop/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj",
   "expectedPackageFiles": [
@@ -27,11 +27,12 @@
     "/Users/imac/.nuget/packages/microsoft.extensions.options/3.1.26/microsoft.extensions.options.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.extensions.primitives/3.1.26/microsoft.extensions.primitives.3.1.26.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identity.client/3.0.8/microsoft.identity.client.3.0.8.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.abstractions/6.22.1/microsoft.identitymodel.abstractions.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.jsonwebtokens/5.5.0/microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
-    "/Users/imac/.nuget/packages/microsoft.identitymodel.logging/5.5.0/microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.logging/6.22.1/microsoft.identitymodel.logging.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.protocols/5.5.0/microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/5.5.0/microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
-    "/Users/imac/.nuget/packages/microsoft.identitymodel.tokens/5.5.0/microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
+    "/Users/imac/.nuget/packages/microsoft.identitymodel.tokens/6.22.1/microsoft.identitymodel.tokens.6.22.1.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/imac/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
