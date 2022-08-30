@@ -99,6 +99,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj": {
+                "projectPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/Core/Core.csproj"
+              },
               "/Users/imac/Desktop/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj": {
                 "projectPath": "/Users/imac/Desktop/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj"
               }
