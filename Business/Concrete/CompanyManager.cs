@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Business.Abstract;
 using Business.Constants;
 using Core.Utilities.Results;
@@ -30,20 +31,20 @@ namespace Business.Concrete
         public IResult Add(Company company)
         {
             _companyDal.Add(company);
-            return new SuccessResult(Messages.Added);
+            return new SuccessResult(Messages.Add);
         }
 
         public IResult Delele(Company company)
         {
             _companyDal.Delete(company);
-            return new SuccessResult(Messages.Deleted);
+            return new SuccessResult(Messages.Delete);
 
         }
 
         public IResult Update(Company company)
         {
             _companyDal.Update(company);
-            return new SuccessResult(Messages.Updated);
+            return new SuccessResult(Messages.Update);
 
         }
 
