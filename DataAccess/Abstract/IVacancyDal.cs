@@ -4,7 +4,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface IVacancyDal : IEntityRepository<Company>
+    public interface IVacancyDal : IEntityRepository<Vacancy>
     {
     }
 }
