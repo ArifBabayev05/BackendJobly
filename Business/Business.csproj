@@ -12,6 +12,7 @@
     <None Remove="DependencyResolvers\AutoFac\" />
     <None Remove="Autofac" />
     <None Remove="Autofac.Extensions.DependencyInjection" />
+    <None Remove="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
@@ -19,6 +20,7 @@
     <Folder Include="Constants\" />
     <Folder Include="DependencyResolvers\" />
     <Folder Include="DependencyResolvers\AutoFac\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
