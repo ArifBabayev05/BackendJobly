@@ -1,14 +1,42 @@
 ﻿<Properties StartupConfiguration="{C0538E24-2989-49EA-B35D-D575FEE07AEB}|Default">
-  <MonoDevelop.Ide.ItemProperties.BackendJobly FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.ItemProperties.Business FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendJobly/Controllers/CategoryController.cs">
+    <Files>
+      <File FileName="BackendJobly/Controllers/CategoryController.cs" Line="33" Column="38" />
+      <File FileName="BackendJobly/Controllers/AuthController.cs" Line="45" Column="29" />
+      <File FileName="Core/Utilities/Security/Jwt/AccessToken.cs" Line="7" Column="1" />
+      <File FileName="BackendJobly/Program.cs" Line="20" Column="1" />
+      <File FileName="Business/Concrete/AuthManager.cs" Line="1" Column="1" />
+      <File FileName="Business/DependencyResolvers/AutoFac/AutoFacBusinessModule.cs" Line="23" Column="41" />
+      <File FileName="Core/Utilities/Security/Jwt/JwtHelper.cs" Line="38" Column="17" />
+      <File FileName="BackendJobly/appsettings.json" Line="4" Column="25" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BackendJobly" expanded="True" selected="True">
-            <Node name="BackendJobly" expanded="True" />
+          <Node name="BackendJobly" expanded="True">
+            <Node name="BackendJobly" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="Business" expanded="True">
+              <Node name="Concrete" expanded="True" />
+              <Node name="DependencyResolvers" expanded="True">
+                <Node name="AutoFac" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Core" expanded="True">
+              <Node name="DataAccess" expanded="True">
+                <Node name="EntityFramework" expanded="True" />
+              </Node>
+              <Node name="Utilities" expanded="True">
+                <Node name="Security" expanded="True">
+                  <Node name="Jwt" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -17,9 +45,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.DataAccess FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Core FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Entities FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Core.Entities.Concrete
 {
     public class User : IEntity
@@ -10,6 +12,8 @@ namespace Core.Entities.Concrete
         public bool Status { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
+
+        //List<UserOperationClaim> userOperationClaims;
     }
 }
 

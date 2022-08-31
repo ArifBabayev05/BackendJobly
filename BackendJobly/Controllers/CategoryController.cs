@@ -30,8 +30,8 @@ namespace BackendJobly.Controllers
 
         }
 
+        //[Authorize(Roles ="Admin")]
         [HttpPost("add")]
-        [Authorize(Roles ="Admin")]
         public IActionResult Add(Category category)
         {
             var result = _categoryService.Add(category);
