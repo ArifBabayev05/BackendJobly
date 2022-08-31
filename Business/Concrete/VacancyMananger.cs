@@ -4,6 +4,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using Entities.Concrete;
 using System.Collections.Generic;
+using DataAccess.Abstract;
 
 namespace Business.Concrete
 {
