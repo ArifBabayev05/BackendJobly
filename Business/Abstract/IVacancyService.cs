@@ -1,8 +1,23 @@
 ﻿using System;
+using Core.Utilities.Results;
+using Entities.Concrete;
+using System.Collections.Generic;
+
 namespace Business.Abstract
 {
     public interface IVacancyService
     {
+        IDataResult<Vacancy> Get(int id);
+
+        IDataResult<List<Vacancy>> GetList();
+
+        IDataResult<List<Vacancy>> GetListByCategory(int categoryId);
+
+        IResult Add(Vacancy vacancy);
+
+        IResult Delele(Vacancy vacancy);
+
+        IResult Update(Vacancy vacancy);
     }
 }
 
