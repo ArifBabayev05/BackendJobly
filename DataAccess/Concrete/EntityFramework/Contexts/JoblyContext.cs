@@ -10,7 +10,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=BackendJoblyApi;User Id=sa;Password=MyPass@word");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=Back;User Id=sa;Password=MyPass@word");
         }
 
 
@@ -21,6 +21,8 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Vacancy> Vacancies { get; set; }
 
 
 

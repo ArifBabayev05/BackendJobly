@@ -8,6 +8,7 @@ namespace Entities.Concrete
         public string Name { get; set; }
         public City City { get; set; }
         public int CityId { get; set; }
+        public DateTime? Deadline { get; set; }
         public string TypeOfwork { get; set; }
         public string VəzifəÖhdəlikləri { get; set; }
         public string Tələblər { get; set; }
