@@ -48,6 +48,24 @@ namespace Core.DataAccess.EntityFramework
                     : context.Set<TEntity>().Where(filter).ToList();
             }
         }
+        public IList<TEntity> GetListForCompany(Expression<Func<TEntity, bool>> filter = null)
+        {
+            using (var context = new TContext())
+            {
+                return filter == null
+                    ? context.Set<TEntity>().ToList()
+                    : context.Set<TEntity>().Where(filter).ToList();
+            }
+        }
+        public IList<TEntity> GetListForVacancy(Expression<Func<TEntity, bool>> filter = null)
+        {
+            using (var context = new TContext())
+            {
+                return filter == null
+                    ? context.Set<TEntity>().ToList()
+                    : context.Set<TEntity>().Where(filter).ToList();
+            }
+        }
 
         public void Update(TEntity entity)
         {

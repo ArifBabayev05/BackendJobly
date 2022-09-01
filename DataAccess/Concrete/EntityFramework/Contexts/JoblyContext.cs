@@ -1,6 +1,7 @@
 ﻿using System;
 using Core.Entities.Concrete;
 using Entities.Concrete;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework.Contexts
@@ -10,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=Back;User Id=sa;Password=MyPass@word");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=Test;User Id=sa;Password=MyPass@word");
         }
 
 
