@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.Models;
 
 namespace Business.Concrete
 {
@@ -20,12 +21,12 @@ namespace Business.Concrete
 
         public IDataResult<Company> Get(int id)
         {
-            return new SuccessDataResult<Company>(_companyDal.Get(p => p.Id == id));
+            return new SuccessDataResult<Company>(_companyDal.Get(p => p.Id== id,"Image"));
         }
 
         public IDataResult<List<Company>> GetList()
         {
-            return new SuccessDataResult<List<Company>>(_companyDal.GetList().ToList());
+            return new SuccessDataResult<List<Company>>(_companyDal.GetList(default,"Image").ToList());
         }
 
         public IResult Add(Company company)

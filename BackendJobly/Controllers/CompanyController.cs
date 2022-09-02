@@ -1,6 +1,7 @@
 ﻿using System;
 using Business.Abstract;
 using Entities.Concrete;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackendJobly.Controllers

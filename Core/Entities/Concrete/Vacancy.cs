@@ -25,7 +25,7 @@ namespace Entities.Concrete
         public int CategoryId { get; set; }
         public Company Company { get; set; }
         public int CompanyId { get; set; }
-        public int User { get; set; }
+        //public int UserId { get; set; }
         List<User> Users { get; set; }
     }
 }

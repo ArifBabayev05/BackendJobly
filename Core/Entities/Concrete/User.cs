@@ -21,7 +21,7 @@ namespace Core.Entities.Concrete
 
         //List<UserOperationClaim> userOperationClaims;
         List<Vacancy> Vacancies { get; set; }
-        public int VacancyId { get; set; }
+        //public int VacancyId { get; set; }
     }
 }
 

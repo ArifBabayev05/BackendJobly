@@ -31,41 +31,45 @@ namespace Core.DataAccess.EntityFramework
             }
         }
 
-        public  TEntity Get(Expression<Func<TEntity, bool>> filter)
+        public  TEntity Get(Expression<Func<TEntity, bool>> filter,params string[] includes)
         {
             using (var context = new TContext())
             {
-                 return context.Set<TEntity>().SingleOrDefault(filter);
+                var query = filter == null
+                   ? context.Set<TEntity>().AsNoTracking()
+                   : context.Set<TEntity>().Where(filter).AsNoTracking();
+                if (includes != null)
+                {
+                    foreach (var item in includes)
+                    {
+                        query = query.Include(item);
+                    };
+                }
+                var data = query.SingleOrDefault();
+                return data;
             }
         }
 
-        public IList<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null)
+        public IList<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null, params string[] includes)
         {
             using (var context = new TContext())
             {
-                return filter == null
-                    ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
+               var query = filter == null
+                    ? context.Set<TEntity>().AsNoTracking()
+                    : context.Set<TEntity>().Where(filter).AsNoTracking();
+                if (includes != null)
+                {
+                    foreach (var item in includes)
+                    {
+                        query = query.Include(item);
+                    };
+                }
+                var data = query.ToList();
+                return data;
+                
             }
         }
-        public IList<TEntity> GetListForCompany(Expression<Func<TEntity, bool>> filter = null)
-        {
-            using (var context = new TContext())
-            {
-                return filter == null
-                    ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
-            }
-        }
-        public IList<TEntity> GetListForVacancy(Expression<Func<TEntity, bool>> filter = null)
-        {
-            using (var context = new TContext())
-            {
-                return filter == null
-                    ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
-            }
-        }
+        
 
         public void Update(TEntity entity)
         {

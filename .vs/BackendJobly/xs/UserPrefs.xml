@@ -1,41 +1,27 @@
 ﻿<Properties StartupConfiguration="{C0538E24-2989-49EA-B35D-D575FEE07AEB}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Concrete/CompanyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendJobly/Startup.cs">
     <Files>
-      <File FileName="Entities/Concrete/Vacancy.cs" Line="13" Column="21" />
-      <File FileName="Entities/Concrete/Company.cs" Line="18" Column="52" />
-      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="34" Column="51" />
-      <File FileName="Business/Abstract/ICompanyService.cs" Line="10" Column="24" />
-      <File FileName="Business/Abstract/ICategoryService.cs" Line="15" Column="43" />
-      <File FileName="Business/Concrete/CompanyManager.cs" Line="51" Column="1" />
-      <File FileName="Business/Concrete/CategoryManager.cs" Line="37" Column="1" />
-      <File FileName="Business/Concrete/VacancyMananger.cs" Line="28" Column="78" />
-      <File FileName="DataAccess/Abstract/IVacancyDal.cs" Line="12" Column="1" />
-      <File FileName="DataAccess/Abstract/ICompanyDal.cs" Line="12" Column="1" />
-      <File FileName="DataAccess/Abstract/ICategoryDal.cs" Line="7" Column="49" />
-      <File FileName="DataAccess/Concrete/EfCategoryDal.cs" Line="9" Column="92" />
-      <File FileName="DataAccess/Concrete/EfUserDal.cs" Line="11" Column="77" />
-      <File FileName="DataAccess/Concrete/EfVacancyDal.cs" Line="15" Column="1" />
-      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="63" Column="14" />
-      <File FileName="DataAccess/Abstract/IUserDal.cs" Line="8" Column="22" />
-      <File FileName="DataAccess/Concrete/EfCompanyDal.cs" Line="16" Column="1" />
-      <File FileName="BackendJobly/Startup.cs" Line="36" Column="83" />
-      <File FileName="Core/Entities/BaseEntity.cs" Line="8" Column="1" />
-      <File FileName="Business/Abstract/IAuthService.cs" Line="1" Column="1" />
-      <File FileName="Business/Concrete/UserManager.cs" Line="30" Column="30" />
-      <File FileName="BackendJobly/Controllers/VacancyController.cs" Line="43" Column="1" />
-      <File FileName="Business/Abstract/IVacancyService.cs" Line="1" Column="1" />
-      <File FileName="Business/Converters/DataConverter.cs" Line="18" Column="65" />
-      <File FileName="Core/Entities/Concrete/UserOperationClaim.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/OperationClaim.cs" Line="1" Column="1" />
-      <File FileName="Business/Abstract/IUserService.cs" Line="1" Column="1" />
-      <File FileName="Core/DataAccess/IEntityRepository.cs" Line="11" Column="66" />
+      <File FileName="BackendJobly/Controllers/CompaniesController.cs" Line="14" Column="54" />
+      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="18" Column="10" />
+      <File FileName="DataAccess/Data/EntityRepository.cs" Line="13" Column="25" />
+      <File FileName="Business/DependencyResolvers/AutoFac/AutoFacBusinessModule.cs" Line="32" Column="99" />
+      <File FileName="Entities/Dtos/CompanyForListDto.cs" Line="8" Column="46" />
+      <File FileName="BackendJobly/Startup.cs" Line="73" Column="65" />
+      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="1" Column="1" />
+      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="18" Column="56" />
+      <File FileName="DataAccess/Concrete/EfCompanyDal.cs" Line="1" Column="1" />
+      <File FileName="DataAccess/Data/IRepository.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/Controllers/VacancyController.cs" Line="22" Column="43" />
+      <File FileName="BackendJobly/Controllers/AuthController.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/Controllers/CategoryController.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/Program.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/appsettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,12 +29,13 @@
           <Node name="BackendJobly" expanded="True">
             <Node name="BackendJobly" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
             <Node name="Business" expanded="True">
               <Node name="Abstract" expanded="True" />
-              <Node name="Concrete" expanded="True" />
-              <Node name="Converters" expanded="True" />
-              <Node name="DependencyResolvers" expanded="True" />
+              <Node name="DependencyResolvers" expanded="True">
+                <Node name="AutoFac" expanded="True" />
+              </Node>
             </Node>
             <Node name="Core" expanded="True">
               <Node name="DataAccess" expanded="True">
@@ -57,14 +44,17 @@
               <Node name="Entities" expanded="True">
                 <Node name="Concrete" expanded="True" />
               </Node>
+              <Node name="Utilities" expanded="True">
+                <Node name="Results" expanded="True" />
+              </Node>
             </Node>
             <Node name="DataAccess" expanded="True">
-              <Node name="Abstract" expanded="True" />
               <Node name="Concrete" expanded="True">
                 <Node name="EntityFramework" expanded="True">
                   <Node name="Contexts" expanded="True" />
                 </Node>
               </Node>
+              <Node name="Data" expanded="True" />
             </Node>
             <Node name="Entities" expanded="True">
               <Node name="Dtos" expanded="True" />
@@ -77,4 +67,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

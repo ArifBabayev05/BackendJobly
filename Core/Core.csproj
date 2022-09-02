@@ -19,7 +19,6 @@
     <None Remove="Microsoft.IdentityModel.Tokens" />
     <None Remove="System.IdentityModel.Tokens.Jwt" />
     <None Remove="Entities\Concrete\" />
-    <None Remove="Entities\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
@@ -33,7 +32,6 @@
     <Folder Include="Utilities\Security\Hashing\" />
     <Folder Include="Utilities\Security\Jwt\" />
     <Folder Include="Entities\Concrete\" />
-    <Folder Include="Entities\Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />

@@ -5,7 +5,7 @@ using Entities.Concrete;
 
 namespace Entities.Models
 {
-    public class Company : IEntity
+    public class Company :BaseEntity, IEntity
     {
         public Company()
         {
@@ -17,7 +17,7 @@ namespace Entities.Models
         public Image Image { get; set; }
         public int ImageId { get; set; }
         List<Vacancy> Vacancy { get; set; }
-        public int VacancyId { get; set; }
+        //public int VacancyId { get; set; } 
     }
 }
 

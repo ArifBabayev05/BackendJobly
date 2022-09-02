@@ -13,7 +13,7 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public int VacancyId { get; set; }
+        //public int VacancyId { get; set; }
         List<Vacancy> Vacancy { get; set; }
     }
 }

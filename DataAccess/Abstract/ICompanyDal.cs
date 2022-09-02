@@ -1,6 +1,7 @@
 ﻿using System;
 using Core.DataAccess;
 using Entities.Concrete;
+using Entities.Models;
 
 namespace DataAccess.Abstract
 {
