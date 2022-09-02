@@ -1,27 +1,23 @@
 ﻿<Properties StartupConfiguration="{C0538E24-2989-49EA-B35D-D575FEE07AEB}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="BackendJobly/Startup.cs">
     <Files>
-      <File FileName="BackendJobly/Controllers/CompaniesController.cs" Line="14" Column="54" />
-      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="18" Column="10" />
-      <File FileName="DataAccess/Data/EntityRepository.cs" Line="13" Column="25" />
-      <File FileName="Business/DependencyResolvers/AutoFac/AutoFacBusinessModule.cs" Line="32" Column="99" />
-      <File FileName="Entities/Dtos/CompanyForListDto.cs" Line="8" Column="46" />
-      <File FileName="BackendJobly/Startup.cs" Line="73" Column="65" />
-      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="18" Column="56" />
-      <File FileName="DataAccess/Concrete/EfCompanyDal.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/Data/IRepository.cs" Line="1" Column="1" />
-      <File FileName="BackendJobly/Controllers/VacancyController.cs" Line="22" Column="43" />
-      <File FileName="BackendJobly/Controllers/AuthController.cs" Line="1" Column="1" />
-      <File FileName="BackendJobly/Controllers/CategoryController.cs" Line="1" Column="1" />
+      <File FileName="Business/Concrete/CompanyManager.cs" Line="24" Column="81" />
+      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="23" Column="24" />
+      <File FileName="Core/Entities/Concrete/Image.cs" Line="6" Column="18" />
+      <File FileName="Core/Entities/Concrete/Company.cs" Line="18" Column="41" />
+      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="67" Column="1" />
+      <File FileName="Business/Concrete/VacancyMananger.cs" Line="46" Column="1" />
+      <File FileName="Business/Converters/DataConverter.cs" Line="19" Column="10" />
+      <File FileName="Business/Concrete/CategoryManager.cs" Line="1" Column="1" />
+      <File FileName="Business/Concrete/UserManager.cs" Line="1" Column="1" />
       <File FileName="BackendJobly/Program.cs" Line="1" Column="1" />
-      <File FileName="BackendJobly/appsettings.json" Line="1" Column="1" />
+      <File FileName="BackendJobly/Startup.cs" Line="39" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,10 +25,11 @@
           <Node name="BackendJobly" expanded="True">
             <Node name="BackendJobly" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
             <Node name="Business" expanded="True">
               <Node name="Abstract" expanded="True" />
+              <Node name="Concrete" expanded="True" />
+              <Node name="Converters" expanded="True" />
               <Node name="DependencyResolvers" expanded="True">
                 <Node name="AutoFac" expanded="True" />
               </Node>
@@ -67,5 +64,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

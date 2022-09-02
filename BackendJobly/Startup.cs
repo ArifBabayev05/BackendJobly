@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization
 using Business.Converters;
 using Core.Entities.Data;
 using Core.Utilities.Security.Encyption;
@@ -35,7 +36,9 @@ namespace BackendJobly
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new DataConverter());
-            });
+            }).AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",
