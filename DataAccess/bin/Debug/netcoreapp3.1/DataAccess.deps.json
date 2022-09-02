@@ -1056,7 +1056,9 @@
       },
       "Entities/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0"
+          "Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.26"
         },
         "runtime": {
           "Entities.dll": {}
