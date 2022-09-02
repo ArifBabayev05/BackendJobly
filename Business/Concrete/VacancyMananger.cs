@@ -20,17 +20,17 @@ namespace Business.Concrete
 
         public IDataResult<Vacancy> Get(int id)
         {
-            return new SuccessDataResult<Vacancy>(_vacancyDal.Get(p => p.Id == id, "Company","Category","Image"));
+            return new SuccessDataResult<Vacancy>(_vacancyDal.Get(p => p.Id == id, includes: new string[] { "Company.Image", "Category" }));
         }
 
         public IDataResult<List<Vacancy>> GetList()
         {
-            return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(default, "Company", "Category", "Image").ToList());
+            return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(default, includes: new string[] { "Company.Image", "Category"}).ToList());
         }
 
         public IDataResult<List<Vacancy>> GetListByCategory(int categoryId)
         {
-            return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(p => p.CategoryId == categoryId, "Company", "Category", "Image").ToList());
+            return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(p => p.CategoryId == categoryId, includes: new string[] { "Company.Image", "Category"}).ToList());
         }
 
         public IResult Add(Vacancy vacancy)

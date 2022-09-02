@@ -21,12 +21,12 @@ namespace Business.Concrete
 
         public IDataResult<Company> Get(int id)
         {
-            return new SuccessDataResult<Company>(_companyDal.Get(p => p.Id== id,"Image"));
+            return new SuccessDataResult<Company>(_companyDal.Get(p => p.Id== id, includes: "Image"));
         }
 
         public IDataResult<List<Company>> GetList()
         {
-            return new SuccessDataResult<List<Company>>(_companyDal.GetList(default,"Image").ToList());
+            return new SuccessDataResult<List<Company>>(_companyDal.GetList(default, includes: "Image").ToList());
         }
 
         public IResult Add(Company company)

@@ -1,6 +1,7 @@
 ﻿using System;
 using Core.Entities.Concrete;
 using Entities.Concrete;
+using Entities.Configurations;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,12 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost;Database=Test;User Id=sa;Password=MyPass@word");
+
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new VacancyConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
 
 
