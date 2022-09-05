@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Business.Constants;
 using Core.Entities.Concrete;
+using DataAccess.Identity;
+using Entities.Dtos.Auth;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Utilities.Abstract;
@@ -9,30 +13,49 @@ using Utilities.DTO;
 
 namespace BackendJobly.Controllers
 {
-    public class AuthanticationController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AuthanticationController : ControllerBase
     {
-        private IAuthRepository _authRepository;
-        private IConfiguration _configuration;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<AppUser> _roleManager;
 
-        public AuthanticationController(IAuthRepository authRepository, IConfiguration configuration)
+        public AuthanticationController(UserManager<AppUser> userManager,
+                                        SignInManager<AppUser> signInManager,
+                                        RoleManager<AppUser> roleManager)
         {
-            _authRepository = authRepository;
-            _configuration = configuration;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
-        public async Task<IActionResult> Register([FromBody]UserForRegisterDto userForRegisterDto)
+
+
+            
+        [HttpGet("register")]
+        public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
-            //var userToCreate = new User
-            //{
-            //    FirstName = userForRegisterDto.FirstName
-            //};
+            AppUser appUser = new AppUser();
+            appUser.FirstName = registerDTO.FirstName;
+            appUser.LastName = registerDTO.LastName;
+            appUser.Email = registerDTO.Email;
+            appUser.UserName = registerDTO.Email;
 
-            //var createdUser = await _authRepository.Register(userToCreate,userForRegisterDto.Password);
-            ////return StatusCodes()
-            throw new ArgumentNullException();
-            
+            var result = await _userManager.CreateAsync(appUser, registerDTO.Password);
 
-            
+            if (!result.Succeeded)
+            {
+                string error = "";
+                foreach (var item in result.Errors)
+                {
+                    error += item.Description += "\n";
+                }
+                return StatusCode(StatusCodes.Status404NotFound, Messages.UserNotFound);
+            }
+            return Ok();
+
+
         }
     }
 }

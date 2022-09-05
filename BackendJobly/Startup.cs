@@ -21,6 +21,10 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using Utilities.Abstract;
 using Utilities.Concrete;
+using Microsoft.AspNetCore.Identity;
+using DataAccess.Concrete.EntityFramework.Contexts;
+using DataAccess.Identity;
+using TokenOptions = Core.Utilities.Security.Jwt.TokenOptions;
 
 namespace BackendJobly
 {
@@ -75,6 +79,9 @@ namespace BackendJobly
                     };
                 });
 
+            services.AddIdentity<AppUser, IdentityRole>()
+                    .AddDefaultTokenProviders()
+                    .AddEntityFrameworkStores<JoblyContext>();
             services.AddScoped<IRepository, EntityRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
 

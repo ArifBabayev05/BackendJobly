@@ -1,13 +1,15 @@
 ﻿using System;
 using Core.Entities.Concrete;
+using DataAccess.Identity;
 using Entities.Concrete;
 using Entities.Configurations;
 using Entities.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework.Contexts
 {
-    public class JoblyContext : DbContext
+    public class JoblyContext : IdentityDbContext<AppUser>
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
