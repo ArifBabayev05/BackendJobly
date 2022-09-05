@@ -4,14 +4,14 @@
     "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj": {}
   },
   "projects": {
-    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj": {
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj",
-        "projectName": "Utilities",
-        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj",
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj",
+        "projectName": "Core",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj",
         "packagesPath": "/Users/imac/.nuget/packages/",
-        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/obj/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/imac/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,229 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.22.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.22.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj",
+        "packagesPath": "/Users/imac/.nuget/packages/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/imac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj"
+              },
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.26, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/Entities.csproj",
+        "packagesPath": "/Users/imac/.nuget/packages/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/imac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj",
+        "projectName": "Utilities",
+        "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/Utilities.csproj",
+        "packagesPath": "/Users/imac/.nuget/packages/",
+        "outputPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Utilities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/imac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/Core/Core.csproj"
+              },
+              "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly/DataAccess/DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -20,7 +20,7 @@
     "BackendJobly": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:35374",
+      "applicationUrl": "http://localhost:53410",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
