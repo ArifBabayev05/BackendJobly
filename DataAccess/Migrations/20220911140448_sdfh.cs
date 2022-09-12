@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccess.Migrations
 {
-    public partial class VacanyUpdate : Migration
+    public partial class sdfh : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,17 +15,6 @@ namespace DataAccess.Migrations
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
                 oldNullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "ImageId",
-                table: "Categories",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Subtitle",
-                table: "Categories",
-                nullable: true);
 
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
@@ -175,11 +164,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Categories_ImageId",
-                table: "Categories",
-                column: "ImageId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -217,22 +201,10 @@ namespace DataAccess.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Categories_Images_ImageId",
-                table: "Categories",
-                column: "ImageId",
-                principalTable: "Images",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Categories_Images_ImageId",
-                table: "Categories");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -253,18 +225,6 @@ namespace DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Categories_ImageId",
-                table: "Categories");
-
-            migrationBuilder.DropColumn(
-                name: "ImageId",
-                table: "Categories");
-
-            migrationBuilder.DropColumn(
-                name: "Subtitle",
-                table: "Categories");
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreatedDate",

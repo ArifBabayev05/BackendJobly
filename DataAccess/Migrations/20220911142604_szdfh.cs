@@ -2,7 +2,7 @@
 
 namespace DataAccess.Migrations
 {
-    public partial class adsfg : Migration
+    public partial class szdfh : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

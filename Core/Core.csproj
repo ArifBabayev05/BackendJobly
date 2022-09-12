@@ -19,6 +19,7 @@
     <None Remove="Microsoft.IdentityModel.Tokens" />
     <None Remove="System.IdentityModel.Tokens.Jwt" />
     <None Remove="Entities\Concrete\" />
+    <None Remove="Microsoft.AspNetCore.Http" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
@@ -37,5 +38,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.22.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.22.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 </Project>

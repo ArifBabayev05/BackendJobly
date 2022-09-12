@@ -3,6 +3,10 @@ using Business.Abstract;
 using Entities.Concrete;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace BackendJobly.Controllers
 {
@@ -10,11 +14,13 @@ namespace BackendJobly.Controllers
     [ApiController]
     public class CompanyController : ControllerBase
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private ICompanyService _companyService;
 
-        public CompanyController(ICompanyService companyService)
+        public CompanyController(ICompanyService companyService, IWebHostEnvironment webHostEnvironment)
         {
             _companyService = companyService;
+            _webHostEnvironment = webHostEnvironment;
         }
         [HttpGet("getbyid")]
         public IActionResult Get(int id)
@@ -45,6 +51,7 @@ namespace BackendJobly.Controllers
         [HttpPost("add")]
         public IActionResult Add(Company company)
         {
+            string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", company.ImageFile.FileName);
             var result = _companyService.Add(company);
             if (result.Success)
             {
@@ -74,6 +81,12 @@ namespace BackendJobly.Controllers
             }
             return BadRequest(result.Message);
         }
+        //[HttpPost("fileUpload")]
+        //public IActionResult UploadFile()
+        //{
+        //    //var ctx = HttpContext.
+        //    return Ok("sa");
+        //}
     }
 }
 
