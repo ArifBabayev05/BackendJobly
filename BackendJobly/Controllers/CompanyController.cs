@@ -51,7 +51,7 @@ namespace BackendJobly.Controllers
         [HttpPost("add")]
         public IActionResult Add(Company company)
         {
-            string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", company.ImageFile.FileName);
+            //string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", company.ImageFile.FileName);
             var result = _companyService.Add(company);
             if (result.Success)
             {

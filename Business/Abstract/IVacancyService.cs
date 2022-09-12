@@ -15,9 +15,9 @@ namespace Business.Abstract
 
         IResult Add(Vacancy vacancy);
 
-        IResult Delele(Vacancy vacancy);
+        IResult Delele(int id);
 
-        IResult Update(Vacancy vacancy);
+        IResult Update(Vacancy vacancy,int id);
     }
 }
 

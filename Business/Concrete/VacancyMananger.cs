@@ -39,15 +39,28 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Add);
         }
 
-        public IResult Delele(Vacancy vacancy)
+        public IResult Delele(int id)
         {
-            _vacancyDal.Delete(vacancy);
+            var data = _vacancyDal.Get(p=>p.Id == id, includes: new string[] { "Company.Image", "Category", "City" });
+            _vacancyDal.Delete(data);
             return new SuccessResult(Messages.Delete);
 
         }
 
-        public IResult Update(Vacancy vacancy)
+        public IResult Update(Vacancy vacancy,int id)
         {
+            var data = _vacancyDal.Get(p => p.Id == id, includes: new string[] { "Company.Image", "Category", "City" });
+            data.Name = vacancy.Name;
+            data.CategoryId = vacancy.CategoryId;
+            data.CityId = vacancy.CityId;
+            data.CompanyId = vacancy.CompanyId;
+            data.CreatedDate = vacancy.CreatedDate;
+            data.Deadline = vacancy.Deadline;
+            data.Salary = vacancy.Salary;
+            data.TypeOfwork = vacancy.TypeOfwork;
+            data.Tələblər = vacancy.Tələblər;
+            data.VəzifəÖhdəlikləri = vacancy.VəzifəÖhdəlikləri;
+
             _vacancyDal.Update(vacancy);
             return new SuccessResult(Messages.Update);
 

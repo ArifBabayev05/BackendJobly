@@ -1584,6 +1584,7 @@
       },
       "Core/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "3.1.26",
           "Microsoft.IdentityModel.Tokens": "6.22.1",
           "System.IdentityModel.Tokens.Jwt": "6.22.1"
