@@ -43,9 +43,9 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Category category)
+        public IActionResult Update(Category category,int id)
         {
-            var result = _categoryService.Update(category);
+            var result = _categoryService.Update(category, id);
             if (result.Success)
             {
                 return Ok(result.Message);
@@ -54,9 +54,9 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(Category category)
+        public IActionResult Delete([FromQuery, FromBody] int id)
         {
-            var result = _categoryService.Delete(category);
+            var result = _categoryService.Delete(id);
             if (result.Success)
             {
                 return Ok(result.Message);

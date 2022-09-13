@@ -5,7 +5,9 @@ using Business.Abstract;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
 using Entities.Concrete;
+using Entities.Models;
 
 namespace Business.Concrete
 {
@@ -24,9 +26,10 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Add);
         }
 
-        public IResult Delete(Category category)
+        public IResult Delete(int id)
         {
-            _categoryDal.Delete(category);
+            var data = _categoryDal.Get(p => p.Id == id);
+            _categoryDal.Delete(data);
             return new SuccessResult(Messages.Delete);
         }
 
@@ -35,8 +38,10 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Category>>(_categoryDal.GetList().ToList());
         }
 
-        public IResult Update(Category category)
+        public IResult Update(Category category,int id)
         {
+            var data = _categoryDal.Get(p => p.Id == id);
+            data.Name = category.Name;
             _categoryDal.Update(category);
             return new SuccessResult(Messages.Update);
         }

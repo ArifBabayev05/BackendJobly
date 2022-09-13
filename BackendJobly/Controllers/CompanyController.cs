@@ -61,9 +61,9 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Company company)
+        public IActionResult Update(Company company,int id)
         {
-            var result = _companyService.Update(company);
+            var result = _companyService.Update(company, id);
             if (result.Success)
             {
                 return Ok(result.Message);
@@ -72,9 +72,9 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(Company company)
+        public IActionResult Delete([FromQuery, FromBody] int id)
         {
-            var result = _companyService.Delele(company);
+            var result = _companyService.Delele(id);
             if (result.Success)
             {
                 return Ok(result.Message);

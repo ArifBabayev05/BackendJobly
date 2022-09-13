@@ -51,8 +51,10 @@ namespace BackendJobly
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",
-                    builder => builder.WithOrigins("http://localhost:3000"));
+                    builder => builder.WithOrigins("http://localhost:3000").WithMethods("PUT", "DELETE", "GET"));
+                
             });
+
             services.AddSwaggerGen();
             services.AddSwaggerGen(c =>
             {
@@ -99,8 +101,15 @@ namespace BackendJobly
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Showing API V1");
             });
+            
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader().WithMethods("PUT", "DELETE", "GET"));
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
+            app.UseCors(x => x
+                .WithOrigins("http://localhost:3000")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .SetIsOriginAllowed(origin => true));
 
             app.UseHttpsRedirection();
 

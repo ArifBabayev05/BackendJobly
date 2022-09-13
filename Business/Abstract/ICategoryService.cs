@@ -10,9 +10,9 @@ namespace Business.Abstract
         IDataResult<List<Category>> GetList();
 
         IResult Add(Category category);
-        IResult Delete(Category category);
+        IResult Delete(int id);
 
-        IResult Update(Category category);
+        IResult Update(Category category,int id);
 
     }
 }

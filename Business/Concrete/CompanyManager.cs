@@ -5,6 +5,7 @@ using Business.Abstract;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
 using Entities.Concrete;
 using Entities.Models;
 
@@ -35,15 +36,23 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Add);
         }
 
-        public IResult Delele(Company company)
+        public IResult Delele(int id)
         {
-            _companyDal.Delete(company);
+            var data = _companyDal.Get(p => p.Id == id, includes: "Image");
+            _companyDal.Delete(data);
             return new SuccessResult(Messages.Delete);
 
         }
 
-        public IResult Update(Company company)
+        public IResult Update(Company company, int id)
         {
+            var data = _companyDal.Get(p => p.Id == id, includes: "Image");
+            data.Name = company.Name;
+            data.Mail = company.Mail;
+            data.TelNumber = company.TelNumber;
+            data.ImageId = company.ImageId;
+            data.CreatedDate = company.CreatedDate;
+           
             _companyDal.Update(company);
             return new SuccessResult(Messages.Update);
 
