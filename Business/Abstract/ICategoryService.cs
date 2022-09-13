@@ -2,11 +2,14 @@
 using Core.Utilities.Results;
 using Entities.Concrete;
 using System.Collections.Generic;
+using Entities.Models;
 
 namespace Business.Abstract
 {
     public interface ICategoryService
     {
+        IDataResult<Category> Get(int id);
+
         IDataResult<List<Category>> GetList();
 
         IResult Add(Category category);

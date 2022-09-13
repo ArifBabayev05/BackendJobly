@@ -4,6 +4,9 @@ using Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+//TODO Get By ID əlavə et Kateqoriyaya
+//TODO React Update Category, Delete Category
+
 namespace BackendJobly.Controllers
 {
     [Route("api/[controller]")]
@@ -17,6 +20,18 @@ namespace BackendJobly.Controllers
             _categoryService = categoryService;
         }
 
+        [HttpGet("getbyid")]
+        public IActionResult Get(int id)
+        {
+            var result = _categoryService.Get(id);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
+
+        }
         [HttpGet("getall")]
         public IActionResult GetList()
         {

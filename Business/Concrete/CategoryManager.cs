@@ -15,6 +15,11 @@ namespace Business.Concrete
     {
         private ICategoryDal _categoryDal;
 
+        public IDataResult<Category> Get(int id)
+        {
+            return new SuccessDataResult<Category>(_categoryDal.Get(p => p.Id == id));
+        }
+
         public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
@@ -33,6 +38,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Delete);
         }
 
+        
         public IDataResult<List<Category>> GetList()
         {
             return new SuccessDataResult<List<Category>>(_categoryDal.GetList().ToList());
