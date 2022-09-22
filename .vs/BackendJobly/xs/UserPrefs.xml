@@ -1,49 +1,51 @@
 ﻿<Properties StartupConfiguration="{C0538E24-2989-49EA-B35D-D575FEE07AEB}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Entities/Concrete/Category.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Abstract/IUserService.cs">
     <Files>
-      <File FileName="BackendJobly/Startup.cs" Line="23" Column="26" />
-      <File FileName="Utilities/DTO/UserForLoginDto.cs" Line="6" Column="9" />
-      <File FileName="BackendJobly/Controllers/AuthanticationController.cs" Line="56" Column="25" />
-      <File FileName="Entities/Dtos/Auth/RegisterDTO.cs" Line="13" Column="27" />
-      <File FileName="Core/Utilities/Security/Jwt/JwtHelper.cs" Line="29" Column="22" />
-      <File FileName="BackendJobly/appsettings.json" Line="1" Column="1" />
-      <File FileName="BackendJobly/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="BackendJobly/Program.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/Category.cs" Line="14" Column="47" />
-      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="17" Column="72" />
-      <File FileName="Core/Entities/Concrete/Vacancy.cs" Line="26" Column="45" />
-      <File FileName="Core/Entities/Concrete/Company.cs" Line="17" Column="41" />
-      <File FileName="Core/Entities/Concrete/City.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/OperationClaim.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/User.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/UserOperationClaim.cs" Line="1" Column="1" />
-      <File FileName="Core/Entities/Concrete/Image.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/Controllers/VacancyController.cs" Line="88" Column="14" />
+      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="36" Column="10" />
+      <File FileName="BackendJobly/Controllers/CategoryController.cs" Line="26" Column="42" />
+      <File FileName="DataAccess/Abstract/ICategoryDal.cs" Line="7" Column="42" />
+      <File FileName="DataAccess/Abstract/ICompanyDal.cs" Line="1" Column="1" />
+      <File FileName="DataAccess/Concrete/EfCategoryDal.cs" Line="1" Column="1" />
+      <File FileName="Business/Converters/DataConverter.cs" Line="1" Column="1" />
+      <File FileName="Business/Concrete/CategoryManager.cs" Line="20" Column="36" />
+      <File FileName="Business/Abstract/ICompanyService.cs" Line="11" Column="42" />
+      <File FileName="Business/Concrete/CompanyManager.cs" Line="24" Column="10" />
+      <File FileName="Business/Abstract/ICategoryService.cs" Line="11" Column="29" />
+      <File FileName="Business/Concrete/VacancyMananger.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/Startup.cs" Line="1" Column="1" />
+      <File FileName="BackendJobly/appsettings.json" Line="13" Column="22" />
+      <File FileName="Business/Abstract/IUserService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendJobly" expanded="True">
-            <Node name="BackendJobly" expanded="True" />
+            <Node name="BackendJobly" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
+            </Node>
             <Node name="Business" expanded="True">
+              <Node name="Abstract" expanded="True">
+                <Node name="IUserService.cs" selected="True" />
+              </Node>
               <Node name="Concrete" expanded="True" />
-              <Node name="Converters" expanded="True" />
             </Node>
             <Node name="Core" expanded="True">
-              <Node name="Entities" expanded="True">
-                <Node name="Concrete" expanded="True" />
+              <Node name="DataAccess" expanded="True">
+                <Node name="EntityFramework" expanded="True" />
               </Node>
+              <Node name="Entities" expanded="True" />
             </Node>
             <Node name="DataAccess" expanded="True">
-              <Node name="Concrete" expanded="True">
-                <Node name="EntityFramework" expanded="True">
-                  <Node name="Contexts" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Abstract" expanded="True" />
+              <Node name="Concrete" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Identity" expanded="True" />
             </Node>
-            <Node name="Entities" expanded="True" />
-            <Node name="Utilities" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -52,10 +54,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Users/imac/Desktop/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
