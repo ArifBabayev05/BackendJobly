@@ -15,16 +15,17 @@ namespace Business.Concrete
     {
         private ICategoryDal _categoryDal;
 
-        public IDataResult<Category> Get(int id)
-        {
-            return new SuccessDataResult<Category>(_categoryDal.Get(p => p.Id == id));
-        }
-
         public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
         }
 
+        public IDataResult<Category> Get(int id)
+        {
+            return new SuccessDataResult<Category>(_categoryDal.Get(p => p.Id == id));
+        }
+
+        
         public IResult Add(Category category)
         {
             _categoryDal.Add(category);

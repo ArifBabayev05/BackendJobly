@@ -13,14 +13,14 @@ namespace Entities.Models
         {
             Vacancy = new List<Vacancy>();
         }
-        public string Name { get; set; }
-        public string Mail { get; set; }
-        public string TelNumber { get; set; }
-        public Image Image { get; set; }
-        public int ImageId { get; set; }
+        public string? Name { get; set; }
+        public string? Mail { get; set; }
+        public string? TelNumber { get; set; }
+        public Image? Image { get; set; }
+        public int? ImageId { get; set; }
         //[NotMapped]
         //public IFormFile ImageFile { get; set; }
-        List<Vacancy> Vacancy { get; set; }
+        List<Vacancy>? Vacancy { get; set; }
         //public int VacancyId { get; set; } 
     }
 }
