@@ -33,7 +33,7 @@ namespace BackendJobly.Controllers
 
 
             
-        [HttpGet("register")]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
             AppUser appUser = new AppUser();
