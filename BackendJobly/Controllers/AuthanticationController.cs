@@ -33,30 +33,30 @@ namespace BackendJobly.Controllers
 
 
             
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterDTO registerDTO)
-        {
-            AppUser appUser = new AppUser();
-            appUser.FirstName = registerDTO.FirstName;
-            appUser.LastName = registerDTO.LastName;
-            appUser.Email = registerDTO.Email;
-            appUser.UserName = registerDTO.Email;
+        //[HttpPost("register")]
+        //public async Task<IActionResult> Register(RegisterDTO registerDTO)
+        //{
+        //    AppUser appUser = new AppUser();
+        //    appUser.FirstName = registerDTO.FirstName;
+        //    appUser.LastName = registerDTO.LastName;
+        //    appUser.Email = registerDTO.Email;
+        //    appUser.UserName = registerDTO.Email;
 
-            var result = await _userManager.CreateAsync(appUser, registerDTO.Password);
+        //    var result = await _userManager.CreateAsync(appUser, registerDTO.Password);
 
-            if (!result.Succeeded)
-            {
-                string error = "";
-                foreach (var item in result.Errors)
-                {
-                    error += item.Description += "\n";
-                }
-                return StatusCode(StatusCodes.Status404NotFound, Messages.UserNotFound);
-            }
-            return Ok();
+        //    if (!result.Succeeded)
+        //    {
+        //        string error = "";
+        //        foreach (var item in result.Errors)
+        //        {
+        //            error += item.Description += "\n";
+        //        }
+        //        return StatusCode(StatusCodes.Status404NotFound, Messages.UserNotFound);
+        //    }
+        //    return Ok();
 
 
-        }
+        //}
     }
 }
 
