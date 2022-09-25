@@ -25,6 +25,8 @@ using Microsoft.AspNetCore.Identity;
 using DataAccess.Concrete.EntityFramework.Contexts;
 using DataAccess.Identity;
 using TokenOptions = Core.Utilities.Security.Jwt.TokenOptions;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace BackendJobly
 {
@@ -111,6 +113,11 @@ namespace BackendJobly
                 .AllowCredentials()
                 .SetIsOriginAllowed(origin => true));
 
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
+                RequestPath = "/img"
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();
