@@ -54,13 +54,41 @@ namespace BackendJobly.Controllers
         [HttpPost("add")]
         public IActionResult Add(Company company)
         {
-            //string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", company.ImageFile.FileName);
+            
             var result = _companyService.Add(company);
-            if (result.Success)
+            try
             {
-                return Ok(result.Message);
+                var files = HttpContext.Request.Form.Files;
+                if (files != null && files.Count > 0)
+                {
+                    foreach (var file in files)
+                    {
+                        FileInfo fi = new FileInfo(file.FileName);
+                        var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                        var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                        }
+                        Image image = new Image();
+                        image.Name = path;
+                    }
+                    return Ok(result.Message);
+                }
+                else
+                {
+                    return BadRequest(result.Message);
+                }
             }
-            return BadRequest(result.Message);
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+            //if (result.Success)
+            //{
+            //    return Ok(result.Message);
+            //}
+            //return BadRequest(result.Message);
         }
 
         [HttpPost("update")]
