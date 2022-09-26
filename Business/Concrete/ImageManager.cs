@@ -36,20 +36,19 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Add);
         }
 
-        public IResult Delete(int id)
-        {
-            var data = _imageDal.Get(p => p.Id == id);
-            _imageDal.Delete(data);
-            return new SuccessResult(Messages.Delete);
-        }
-
-
         public IResult Update(Image city, int id)
         {
             var data = _imageDal.Get(p => p.Id == id);
             data.Name = city.Name;
             _imageDal.Update(city);
             return new SuccessResult(Messages.Update);
+        }
+
+        public IResult Delele(int id)
+        {
+            var data = _imageDal.Get(p => p.Id == id);
+            _imageDal.Delete(data);
+            return new SuccessResult(Messages.Delete);
         }
     }
 }

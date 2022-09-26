@@ -2,23 +2,16 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Abstract/IUserService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Entities/Concrete/City.cs">
     <Files>
-      <File FileName="BackendJobly/Controllers/VacancyController.cs" Line="88" Column="14" />
-      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="36" Column="10" />
-      <File FileName="BackendJobly/Controllers/CategoryController.cs" Line="26" Column="42" />
-      <File FileName="DataAccess/Abstract/ICategoryDal.cs" Line="7" Column="42" />
-      <File FileName="DataAccess/Abstract/ICompanyDal.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/Concrete/EfCategoryDal.cs" Line="1" Column="1" />
-      <File FileName="Business/Converters/DataConverter.cs" Line="1" Column="1" />
-      <File FileName="Business/Concrete/CategoryManager.cs" Line="20" Column="36" />
-      <File FileName="Business/Abstract/ICompanyService.cs" Line="11" Column="42" />
-      <File FileName="Business/Concrete/CompanyManager.cs" Line="24" Column="10" />
-      <File FileName="Business/Abstract/ICategoryService.cs" Line="11" Column="29" />
-      <File FileName="Business/Concrete/VacancyMananger.cs" Line="1" Column="1" />
-      <File FileName="BackendJobly/Startup.cs" Line="1" Column="1" />
-      <File FileName="BackendJobly/appsettings.json" Line="13" Column="22" />
-      <File FileName="Business/Abstract/IUserService.cs" Line="1" Column="1" />
+      <File FileName="Business/Concrete/CityManager.cs" Line="52" Column="10" />
+      <File FileName="Business/Concrete/ImageManager.cs" Line="14" Column="37" />
+      <File FileName="Core/Entities/Concrete/City.cs" Line="7" Column="23" />
+      <File FileName="Business/Abstract/IImageService.cs" Line="19" Column="29" />
+      <File FileName="Business/Abstract/ICityService.cs" Line="4" Column="1" />
+      <File FileName="Business/Abstract/ICategoryService.cs" Line="4" Column="1" />
+      <File FileName="Core/Entities/Concrete/Vacancy.cs" Line="24" Column="18" />
+      <File FileName="Core/Entities/Concrete/Category.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,26 +19,40 @@
           <Node name="BackendJobly" expanded="True">
             <Node name="BackendJobly" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
             </Node>
             <Node name="Business" expanded="True">
-              <Node name="Abstract" expanded="True">
-                <Node name="IUserService.cs" selected="True" />
-              </Node>
+              <Node name="Abstract" expanded="True" />
               <Node name="Concrete" expanded="True" />
+              <Node name="DependencyResolvers" expanded="True">
+                <Node name="AutoFac" expanded="True" />
+              </Node>
             </Node>
             <Node name="Core" expanded="True">
               <Node name="DataAccess" expanded="True">
                 <Node name="EntityFramework" expanded="True" />
               </Node>
-              <Node name="Entities" expanded="True" />
+              <Node name="Entities" expanded="True">
+                <Node name="Concrete" expanded="True">
+                  <Node name="City.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Utilities" expanded="True">
+                <Node name="Security" expanded="True">
+                  <Node name="Jwt" expanded="True" />
+                </Node>
+              </Node>
             </Node>
             <Node name="DataAccess" expanded="True">
               <Node name="Abstract" expanded="True" />
-              <Node name="Concrete" expanded="True" />
+              <Node name="Concrete" expanded="True">
+                <Node name="EntityFramework" expanded="True">
+                  <Node name="Contexts" expanded="True" />
+                </Node>
+              </Node>
               <Node name="Data" expanded="True" />
               <Node name="Identity" expanded="True" />
             </Node>
+            <Node name="Entities" expanded="True" />
           </Node>
         </State>
       </Pad>

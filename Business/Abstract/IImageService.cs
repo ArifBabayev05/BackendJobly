@@ -2,20 +2,21 @@
 using Core.Utilities.Results;
 using Entities.Models;
 using System.Collections.Generic;
+using Entities.Concrete;
 
 namespace Business.Abstract
 {
     public interface IImageService
     {
-        IDataResult<Company> Get(int id);
+        IDataResult<Image> Get(int id);
 
-        IDataResult<List<Company>> GetList();
+        IDataResult<List<Image>> GetList();
 
-        IResult Add(Company company);
+        IResult Add(Image company);
 
         IResult Delele(int id);
 
-        IResult Update(Company company, int id);
+        IResult Update(Image company, int id);
     }
 }
 
