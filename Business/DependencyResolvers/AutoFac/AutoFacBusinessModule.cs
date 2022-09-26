@@ -26,6 +26,9 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<CityManager>().As<ICityService>();
             builder.RegisterType<EfCityDal>().As<ICityDal>();
 
+            builder.RegisterType<ImageManager>().As<IImageService>();
+            builder.RegisterType<EfImageDal>().As<IImageDal>();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 
