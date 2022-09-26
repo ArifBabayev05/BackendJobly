@@ -7,11 +7,11 @@ using Entities.Models;
 
 namespace Business.Concrete
 {
-    public class ImageController : IImageService
+    public class ImageManager : IImageService
     {
         private readonly IImageDal _imageDal;
 
-        public ImageController(IImageDal imageDal)
+        public ImageManager(IImageDal imageDal)
         {
             _imageDal = imageDal;
         }
