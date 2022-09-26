@@ -13,8 +13,9 @@ namespace Entities.Concrete
         {
             Users = new List<User>();
         }
+
         public string Name { get; set; }
-        public Image City { get; set; }
+        public City City { get; set; }
         public int CityId { get; set; }
         public DateTime? Deadline { get; set; }
         public string TypeOfwork { get; set; }

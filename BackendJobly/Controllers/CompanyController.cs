@@ -7,6 +7,7 @@ using System.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace BackendJobly.Controllers
 {
@@ -53,11 +54,10 @@ namespace BackendJobly.Controllers
 
         [HttpPost("add")]
         [Consumes("multipart/form-data")]
-        public ActionResult<string> Add(Company company,[FromForm]IFormFile fileup)
+        public ActionResult<string> Add( [FromForm]Company company)
         {
-            var result = _companyService.Add(company);
-            if (true)
-            {
+           
+                    _companyService.Add(company);
                 var files = HttpContext.Request.Form.Files;
                 if (files != null && files.Count > 0)
                 {
@@ -75,12 +75,7 @@ namespace BackendJobly.Controllers
                     }
                     return Ok("Uğurla əlavə edildi");
                 }
-                else
-                {
-                    return Ok("Xəta Baş Verdi!");
-                }
-
-            }
+                return Ok(company);
         }
 
         [HttpPost("update")]
