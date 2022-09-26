@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
+using Entities.Concrete;
 using Entities.Models;
 
 namespace Business.Concrete
@@ -16,29 +20,36 @@ namespace Business.Concrete
             _imageDal = imageDal;
         }
 
-        public IResult Add(Company company)
+        public IDataResult<Image> Get(int id)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Image>(_imageDal.Get(p => p.Id == id));
         }
 
-        public IResult Delele(int id)
+        public IDataResult<List<Image>> GetList()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<Image>>(_imageDal.GetList().ToList());
         }
 
-        public IDataResult<Company> Get(int id)
+        public IResult Add(Image city)
         {
-            throw new NotImplementedException();
+            _imageDal.Add(city);
+            return new SuccessResult(Messages.Add);
         }
 
-        public IDataResult<List<Company>> GetList()
+        public IResult Delete(int id)
         {
-            throw new NotImplementedException();
+            var data = _imageDal.Get(p => p.Id == id);
+            _imageDal.Delete(data);
+            return new SuccessResult(Messages.Delete);
         }
 
-        public IResult Update(Company company, int id)
+
+        public IResult Update(Image city, int id)
         {
-            throw new NotImplementedException();
+            var data = _imageDal.Get(p => p.Id == id);
+            data.Name = city.Name;
+            _imageDal.Update(city);
+            return new SuccessResult(Messages.Update);
         }
     }
 }
