@@ -1,7 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
+
 namespace BackendJobly.Controllers
 {
-    public class ImageController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ImageController : ControllerBase
     {
         public ImageController()
         {

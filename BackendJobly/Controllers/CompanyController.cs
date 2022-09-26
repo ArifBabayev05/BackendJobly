@@ -84,7 +84,7 @@ namespace BackendJobly.Controllers
             return BadRequest(result.Message);
         }
         [HttpPost("fileUpload")]
-        public ActionResult<string> UploadImages()
+        public ActionResult<string> UploadImages(IFormFile uploadFile)
         {
             try
             {
