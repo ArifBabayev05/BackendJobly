@@ -19,7 +19,7 @@ namespace Entities.Models
         public Image Image { get; set; }
         public int ImageId { get; set; }
         [NotMapped]
-        public IFormFile formFile { get; set; }
+        public IFormFile file { get; set; }
         public string Path { get; set; }
         //[NotMapped]
         //public IFormFile ImageFile { get; set; }

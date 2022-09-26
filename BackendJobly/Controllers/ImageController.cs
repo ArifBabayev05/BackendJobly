@@ -1,6 +1,9 @@
 ﻿using System;
+using System.IO;
 using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackendJobly.Controllers
@@ -10,10 +13,14 @@ namespace BackendJobly.Controllers
     public class ImageController : ControllerBase
     {
         private IImageService _cityService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public IHostingEnvironment _hostingEnvironment;
 
-        public ImageController(IImageService cityService)
+        public ImageController(IImageService cityService, IWebHostEnvironment webHostEnvironment, IHostingEnvironment hostingEnvironment)
         {
             _cityService = cityService;
+            _webHostEnvironment = webHostEnvironment;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         [HttpGet("getbyid")]
@@ -41,17 +48,78 @@ namespace BackendJobly.Controllers
 
         }
 
-        //[Authorize(Roles ="Admin")]
-        [HttpPost("add")]
-        public IActionResult Add(Image city)
-        {
-            var result = _cityService.Add(city);
-            if (result.Success)
-            {
-                return Ok(result.Message);
-            }
-            return BadRequest(result.Message);
-        }
+     
+        //[HttpPost("add")]
+        //public ActionResult<string> Add(Image city, [FromForm] IFormFile formFile)
+        //{
+        //    var result = _cityService.Add(city);
+        //    if (result.Success)
+        //    {
+        //        return Ok(result.Message);
+        //    }
+        //    return BadRequest(result.Message);
+        //    //if (true) {
+        //    //    var files = HttpContext.Request.Form.Files;
+        //    //    if (files != null && files.Count > 0)
+        //    //    {
+        //    //        foreach (var file in files)
+        //    //        {
+        //    //            FileInfo fi = new FileInfo(file.FileName);
+        //    //            var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+        //    //            var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+        //    //            using (var stream = new FileStream(path, FileMode.Create))
+        //    //            {
+        //    //                file.CopyTo(stream);
+        //    //            }
+        //    //            Image image = new Image();
+        //    //            image.Name = path;
+        //    //        }
+        //    //        return Ok("Uğurla əlavə edildi");
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        return Ok("Xəta Baş Verdi!");
+        //    //    }
+
+        //    //}
+
+        //}
+        ////[HttpPost("upload")]
+        ////[Authorize(Roles ="Admin")]
+        //[Consumes("multipart/form-data")]
+        //[NonAction]
+        //public ActionResult<string> UploadImage([FromForm] IFormFile formFile)
+        //{
+
+        //    if (true)
+        //    {
+        //        var files = HttpContext.Request.Form.Files;
+        //        if (files != null && files.Count > 0)
+        //        {
+        //            foreach (var file in files)
+        //            {
+        //                FileInfo fi = new FileInfo(file.FileName);
+        //                var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+        //                var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+        //                using (var stream = new FileStream(path, FileMode.Create))
+        //                {
+        //                    file.CopyTo(stream);
+        //                }
+        //                Image image = new Image();
+        //                image.Name = path;
+        //            }
+        //            return Ok("Uğurla əlavə edildi");
+        //        }
+        //        else
+        //        {
+        //            return Ok("Xəta Baş Verdi!");
+        //        }
+
+        //    }
+
+        //}
+
+
 
         [HttpPost("update")]
         public IActionResult Update(Image city, int id)

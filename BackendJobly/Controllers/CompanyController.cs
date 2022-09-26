@@ -52,14 +52,35 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
-        public ActionResult<string> Add(Company company)
+        [Consumes("multipart/form-data")]
+        public ActionResult<string> Add(Company company,[FromForm]IFormFile fileup)
         {
             var result = _companyService.Add(company);
-            if (result.Success)
+            if (true)
             {
-                return Ok(result.Message);
+                var files = HttpContext.Request.Form.Files;
+                if (files != null && files.Count > 0)
+                {
+                    foreach (var file in files)
+                    {
+                        FileInfo fi = new FileInfo(file.FileName);
+                        var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                        var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                        }
+                        Image image = new Image();
+                        image.Name = path;
+                    }
+                    return Ok("Uğurla əlavə edildi");
+                }
+                else
+                {
+                    return Ok("Xəta Baş Verdi!");
+                }
+
             }
-            return BadRequest(result.Message);
         }
 
         [HttpPost("update")]
