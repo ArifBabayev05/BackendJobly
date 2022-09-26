@@ -2,23 +2,30 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Entities/Concrete/City.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendJobly/Controllers/ImageController.cs">
     <Files>
-      <File FileName="Business/Concrete/CityManager.cs" Line="52" Column="10" />
-      <File FileName="Business/Concrete/ImageManager.cs" Line="14" Column="37" />
-      <File FileName="Core/Entities/Concrete/City.cs" Line="7" Column="23" />
+      <File FileName="Business/Concrete/CityManager.cs" Line="22" Column="30" />
+      <File FileName="Business/Concrete/ImageManager.cs" Line="37" Column="10" />
+      <File FileName="Core/Entities/Concrete/City.cs" Line="7" Column="18" />
       <File FileName="Business/Abstract/IImageService.cs" Line="19" Column="29" />
       <File FileName="Business/Abstract/ICityService.cs" Line="4" Column="1" />
       <File FileName="Business/Abstract/ICategoryService.cs" Line="4" Column="1" />
-      <File FileName="Core/Entities/Concrete/Vacancy.cs" Line="24" Column="18" />
+      <File FileName="Core/Entities/Concrete/Vacancy.cs" Line="16" Column="41" />
       <File FileName="Core/Entities/Concrete/Category.cs" Line="19" Column="1" />
+      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="33" Column="23" />
+      <File FileName="Core/Entities/Concrete/Company.cs" Line="10" Column="18" />
+      <File FileName="Core/Entities/Concrete/Image.cs" Line="10" Column="6" />
+      <File FileName="BackendJobly/Controllers/ImageController.cs" Line="12" Column="19" />
+      <File FileName="BackendJobly/Controllers/CityController.cs" Line="19" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendJobly" expanded="True">
             <Node name="BackendJobly" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ImageController.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Business" expanded="True">
               <Node name="Abstract" expanded="True" />
@@ -32,9 +39,7 @@
                 <Node name="EntityFramework" expanded="True" />
               </Node>
               <Node name="Entities" expanded="True">
-                <Node name="Concrete" expanded="True">
-                  <Node name="City.cs" selected="True" />
-                </Node>
+                <Node name="Concrete" expanded="True" />
               </Node>
               <Node name="Utilities" expanded="True">
                 <Node name="Security" expanded="True">

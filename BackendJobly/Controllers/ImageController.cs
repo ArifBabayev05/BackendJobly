@@ -67,7 +67,7 @@ namespace BackendJobly.Controllers
         [HttpPost("delete")]
         public IActionResult Delete([FromQuery, FromBody] int id)
         {
-            var result = _cityService.Delete(id);
+            var result = _cityService.Delele(id);
             if (result.Success)
             {
                 return Ok(result.Message);
