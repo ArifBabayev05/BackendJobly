@@ -10,8 +10,8 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [NotMapped]
-        public IFormFile file{ get; set; }
+        //[NotMapped]
+        //public IFormFile file{ get; set; }
     }
 }
 

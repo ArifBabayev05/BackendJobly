@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System.Threading.Tasks;
+using Core.Utilities.Results;
 
 namespace BackendJobly.Controllers
 {
@@ -53,29 +54,15 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
-        [Consumes("multipart/form-data")]
-        public ActionResult<string> Add( [FromForm]Company company)
+        public IActionResult Add(Company company)
         {
-           
-                    _companyService.Add(company);
-                var files = HttpContext.Request.Form.Files;
-                if (files != null && files.Count > 0)
-                {
-                    foreach (var file in files)
-                    {
-                        FileInfo fi = new FileInfo(file.FileName);
-                        var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
-                        var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
-                        using (var stream = new FileStream(path, FileMode.Create))
-                        {
-                            file.CopyTo(stream);
-                        }
-                        Image image = new Image();
-                        image.Name = path;
-                    }
-                    return Ok("Uğurla əlavə edildi");
-                }
-                return Ok(company);
+            var result = _companyService.Add(company);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+            return BadRequest(result.Message);
+
         }
 
         [HttpPost("update")]
@@ -99,38 +86,38 @@ namespace BackendJobly.Controllers
             }
             return BadRequest(result.Message);
         }
-        [HttpPost("fileUpload")]
-        public ActionResult<string> UploadImages(IFormFile uploadFile)
-        {
-            try
-            {
-                var files = HttpContext.Request.Form.Files;
-                if (files!=null && files.Count>0)
-                {
-                    foreach (var file in files)
-                    {
-                        FileInfo fi = new FileInfo(file.FileName);
-                        var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
-                        var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
-                        using(var stream = new FileStream(path, FileMode.Create))
-                        {
-                            file.CopyTo(stream);
-                        }
-                        Image image = new Image();
-                        image.Name = path;
-                    }
-                    return "Uğurla əlavə edildi";
-                }
-                else
-                {
-                    return "Xəta Baş Verdi!";
-                }
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
+        //[HttpPost("fileUpload")]
+        //public ActionResult<string> UploadImages(IFormFile uploadFile)
+        //{
+        //    try
+        //    {
+        //        var files = HttpContext.Request.Form.Files;
+        //        if (files!=null && files.Count>0)
+        //        {
+        //            foreach (var file in files)
+        //            {
+        //                FileInfo fi = new FileInfo(file.FileName);
+        //                var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+        //                var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+        //                using(var stream = new FileStream(path, FileMode.Create))
+        //                {
+        //                    file.CopyTo(stream);
+        //                }
+        //                Image image = new Image();
+        //                image.Name = path;
+        //            }
+        //            return "Uğurla əlavə edildi";
+        //        }
+        //        else
+        //        {
+        //            return "Xəta Baş Verdi!";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return ex.Message;
+        //    }
+        //}
     }
 }
 
