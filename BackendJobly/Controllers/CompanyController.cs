@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System.Threading.Tasks;
 using Core.Utilities.Results;
+using DataAccess.Migrations;
 
 namespace BackendJobly.Controllers
 {
@@ -18,14 +19,16 @@ namespace BackendJobly.Controllers
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
         private ICompanyService _companyService;
+        private IImageService _imageSerivce;
         //[Obsolete]
         public IWebHostEnvironment _hostingEnvironment;
 
-        public CompanyController(ICompanyService companyService, IWebHostEnvironment webHostEnvironment, IWebHostEnvironment hostingEnvironment)
+        public CompanyController(ICompanyService companyService, IWebHostEnvironment webHostEnvironment, IWebHostEnvironment hostingEnvironment, IImageService imageSerivce)
         {
             _companyService = companyService;
             _webHostEnvironment = webHostEnvironment;
             _hostingEnvironment = hostingEnvironment;
+            _imageSerivce = imageSerivce;
         }
         [HttpGet("getbyid")]
         public IActionResult Get(int id)
@@ -56,12 +59,18 @@ namespace BackendJobly.Controllers
         [HttpPost("add")]
         public IActionResult Add([FromForm]Company company)
         {
-            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets",company.ImageFile.FileName);
+            string fileName = Guid.NewGuid().ToString() + company.ImageFile.FileName;
+            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets",fileName);
 
             using(FileStream fs = new FileStream(path, FileMode.Create))
             {
                 company.ImageFile.CopyTo(fs);
             }
+            Image image = new Image();
+            image.Name = fileName;
+            _imageSerivce.Add(image);
+
+            company.ImageId = image.Id;
             var result = _companyService.Add(company);
             if (result.Success)
             {

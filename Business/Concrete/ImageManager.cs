@@ -32,6 +32,7 @@ namespace Business.Concrete
 
         public IResult Add(Image city)
         {
+
             _imageDal.Add(city);
             return new SuccessResult(Messages.Add);
         }
