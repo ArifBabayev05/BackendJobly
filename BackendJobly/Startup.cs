@@ -27,6 +27,8 @@ using DataAccess.Identity;
 using TokenOptions = Core.Utilities.Security.Jwt.TokenOptions;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using Business.Abstract;
+using Entities.Models;
 
 namespace BackendJobly
 {
@@ -36,7 +38,7 @@ namespace BackendJobly
         {
             Configuration = configuration;
         }
-        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -115,7 +117,7 @@ namespace BackendJobly
 
             app.UseStaticFiles(new StaticFileOptions()
             {
-                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.WebRootPath, "assets")),
                 RequestPath = "/img"
             });
             app.UseHttpsRedirection();
