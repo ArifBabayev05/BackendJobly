@@ -18,12 +18,12 @@ namespace Entities.Models
         public string TelNumber { get; set; }
         public Image Image { get; set; }
         public int ImageId { get; set; }
-        //public IFormFile file { get; set; }
-        //public string Path { get; set; }
-        //[NotMapped]
-        //public IFormFile ImageFile { get; set; }
+        
+        
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
         List<Vacancy> Vacancy { get; set; }
-        //public int VacancyId { get; set; } 
+         
     }
 }
 

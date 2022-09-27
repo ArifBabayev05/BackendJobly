@@ -19,9 +19,9 @@ namespace BackendJobly.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
         private ICompanyService _companyService;
         //[Obsolete]
-        public IHostingEnvironment _hostingEnvironment;
+        public IWebHostEnvironment _hostingEnvironment;
 
-        public CompanyController(ICompanyService companyService, IWebHostEnvironment webHostEnvironment, IHostingEnvironment hostingEnvironment)
+        public CompanyController(ICompanyService companyService, IWebHostEnvironment webHostEnvironment, IWebHostEnvironment hostingEnvironment)
         {
             _companyService = companyService;
             _webHostEnvironment = webHostEnvironment;
@@ -54,8 +54,14 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add(Company company)
+        public IActionResult Add([FromForm]Company company)
         {
+            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets",company.ImageFile.FileName);
+
+            using(FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                company.ImageFile.CopyTo(fs);
+            }
             var result = _companyService.Add(company);
             if (result.Success)
             {
@@ -86,38 +92,38 @@ namespace BackendJobly.Controllers
             }
             return BadRequest(result.Message);
         }
-        //[HttpPost("fileUpload")]
-        //public ActionResult<string> UploadImages(IFormFile uploadFile)
-        //{
-        //    try
-        //    {
-        //        var files = HttpContext.Request.Form.Files;
-        //        if (files!=null && files.Count>0)
-        //        {
-        //            foreach (var file in files)
-        //            {
-        //                FileInfo fi = new FileInfo(file.FileName);
-        //                var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
-        //                var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
-        //                using(var stream = new FileStream(path, FileMode.Create))
-        //                {
-        //                    file.CopyTo(stream);
-        //                }
-        //                Image image = new Image();
-        //                image.Name = path;
-        //            }
-        //            return "Uğurla əlavə edildi";
-        //        }
-        //        else
-        //        {
-        //            return "Xəta Baş Verdi!";
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return ex.Message;
-        //    }
-        //}
+        [HttpPost("fileUpload")]
+        public ActionResult<string> UploadImages(IFormFile uploadFile)
+        {
+            try
+            {
+                var files = HttpContext.Request.Form.Files;
+                if (files != null && files.Count > 0)
+                {
+                    foreach (var file in files)
+                    {
+                        FileInfo fi = new FileInfo(file.FileName);
+                        var newFileName = "Image" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                        var path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newFileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                        }
+                        Image image = new Image();
+                        image.Name = path;
+                    }
+                    return "Uğurla əlavə edildi";
+                }
+                else
+                {
+                    return "Xəta Baş Verdi!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }
 

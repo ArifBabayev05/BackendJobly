@@ -21,6 +21,8 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Images\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\assets\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
@@ -38,5 +40,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.26" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.28" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\assets\" />
   </ItemGroup>
 </Project>
