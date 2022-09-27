@@ -57,7 +57,7 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add([FromForm]Company company)
+        public IActionResult Add([FromForm,FromHeader,FromBody]Company company)
         {
             string fileName = Guid.NewGuid().ToString() + company.ImageFile.FileName;
             string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets",fileName);
