@@ -84,6 +84,7 @@ namespace BackendJobly.Controllers
         [HttpPost("update")]
         public IActionResult Update(Company company,int id)
         {
+
             var result = _companyService.Update(company, id);
             if (result.Success)
             {

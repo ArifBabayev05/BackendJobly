@@ -14,8 +14,10 @@ namespace BackendJobly.Controllers
     {
         private IImageService _cityService;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        [Obsolete]
         public IHostingEnvironment _hostingEnvironment;
 
+        [Obsolete]
         public ImageController(IImageService cityService, IWebHostEnvironment webHostEnvironment, IHostingEnvironment hostingEnvironment)
         {
             _cityService = cityService;

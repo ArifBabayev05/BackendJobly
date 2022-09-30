@@ -37,11 +37,11 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Add);
         }
 
-        public IResult Update(Image city, int id)
+        public IResult Update(Image image, int id)
         {
             var data = _imageDal.Get(p => p.Id == id);
-            data.Name = city.Name;
-            _imageDal.Update(city);
+            data.Name = image.Name;
+            _imageDal.Update(image);
             return new SuccessResult(Messages.Update);
         }
 

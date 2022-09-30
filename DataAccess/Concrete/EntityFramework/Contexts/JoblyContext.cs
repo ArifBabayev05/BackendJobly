@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=Test;User Id=sa;Password=MyPass@word");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=__JoblyDatabase;User Id=sa;Password=MyPass@word");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,7 +26,9 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
+#pragma warning disable CS0114 // Member hides inherited member; missing override keyword
         public DbSet<User> Users { get; set; }
+#pragma warning restore CS0114 // Member hides inherited member; missing override keyword
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Image> Images { get; set; }
