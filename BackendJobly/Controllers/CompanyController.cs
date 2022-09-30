@@ -57,14 +57,15 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add([FromForm,FromHeader,FromBody]Company company)
+        public IActionResult Add([FromForm] Company company)
         {
+           
             string fileName = Guid.NewGuid().ToString() + company.ImageFile.FileName;
-            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets",fileName);
+            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets", fileName);
 
-            using(FileStream fs = new FileStream(path, FileMode.Create))
+            using (FileStream fs = new FileStream(path, FileMode.Create))
             {
-                company.ImageFile.CopyTo(fs);
+                company.ImageFile.CopyToAsync(fs);
             }
             Image image = new Image();
             image.Name = fileName;
