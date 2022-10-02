@@ -33,6 +33,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(p => p.CategoryId == categoryId, includes: new string[] { "Company.Image", "Category", "City" }).ToList());
         }
 
+        public IDataResult<List<Vacancy>> GetListByCompany(int companyId)
+        {
+            return new SuccessDataResult<List<Vacancy>>(_vacancyDal.GetList(p => p.CompanyId == companyId, includes: new string[] { "Company.Image", "Category", "City" }).ToList());
+        }
+
         public IResult Add(Vacancy vacancy)
         {
             _vacancyDal.Add(vacancy);
@@ -65,6 +70,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Update);
 
         }
+
     }
 }
 
