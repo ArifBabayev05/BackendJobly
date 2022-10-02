@@ -16,11 +16,9 @@
     <None Remove="ModelStateValidation" />
     <None Remove="Microsoft.AspNetCore.Mvc" />
     <None Remove="AppData\" />
-    <None Remove="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Images\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\assets\" />
   </ItemGroup>
