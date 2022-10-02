@@ -41,6 +41,18 @@ namespace BackendJobly.Controllers
             return BadRequest(result.Message);
 
         }
+        [HttpGet("getlistbycompany")]
+        public IActionResult GetListByCompany(int companyId)
+        {
+            var result = _vacancyService.GetListByCompany(companyId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
+
+        }
 
         [HttpGet("getbyid")]
         public IActionResult Get(int id)
