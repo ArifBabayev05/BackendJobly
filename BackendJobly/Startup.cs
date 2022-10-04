@@ -119,6 +119,7 @@ namespace BackendJobly
             {
                 FileProvider = new PhysicalFileProvider(Path.Combine(env.WebRootPath, "assets")),
                 RequestPath = "/img"
+               
             });
             app.UseHttpsRedirection();
 

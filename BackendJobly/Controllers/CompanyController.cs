@@ -72,6 +72,7 @@ namespace BackendJobly.Controllers
             _imageSerivce.Add(image);
 
             company.ImageId = image.Id;
+
             var result = _companyService.Add(company);
             if (result.Success)
             {
@@ -82,10 +83,27 @@ namespace BackendJobly.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Company company,int id)
+        public IActionResult Update([FromForm]  Company company,int id)
         {
+            string fileName = Guid.NewGuid().ToString() + company.ImageFile.FileName;
+            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets", fileName);
+
+            using (FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                company.ImageFile.CopyToAsync(fs);
+            }
+            Image image = new Image();
+            image.Name = fileName;
+            company.ImageId = image.Id;
+
+            _imageSerivce.Add(image);
+
+            int oldImageId = company.ImageId;
+            company.ImageId = image.Id;
 
             var result = _companyService.Update(company, id);
+
+            _imageSerivce.Delele(oldImageId);
             if (result.Success)
             {
                 return Ok(result.Message);

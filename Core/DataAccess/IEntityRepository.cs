@@ -16,6 +16,6 @@ namespace Core.DataAccess
         void Update(T entity);
         void Delete(T entity);
 
-    }
+    }   
 }
 
