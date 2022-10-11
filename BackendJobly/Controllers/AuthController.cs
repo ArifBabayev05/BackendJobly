@@ -25,15 +25,15 @@ namespace BackendJobly.Controllers
                 return BadRequest(userToLogin.Message);
             }
 
-            var result = _authService.CreateAccessToken(userToLogin.Data);
 
-            if (result.Success)
+
+            if (userToLogin.Success)
             {
-                return Ok(result.Data);
+                return Ok(userToLogin.Data);
             }
             else
             {
-                return BadRequest(result.Message);
+                return BadRequest(userToLogin.Message);
             }
         }
         [HttpPost("register")]
@@ -45,12 +45,11 @@ namespace BackendJobly.Controllers
                 return BadRequest(userExist.Message);
             }
             var registeResult = _authService.Register(userForRegisterDTO, userForRegisterDTO.Password);
-            var result = _authService.CreateAccessToken(registeResult.Data);
-            if (result.Success)
+            if (registeResult.Success)
             {
-                return Ok(result.Data);
+                return Ok(registeResult.Data);
             }
-            return BadRequest(result.Message);
+            return BadRequest(registeResult.Message);
 
 
 
