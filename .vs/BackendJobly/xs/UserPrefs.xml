@@ -1,0 +1,45 @@
+﻿<Properties>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BackendJobly PreferredExecutionTarget="/Users/imac/Desktop/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/imac/Desktop/Jobly/BackendJobly/BackendJobly-main/Business/Concrete/ImageManager.cs" relfile="Business/Concrete/ImageManager.cs" line="41" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs">
+    <Files>
+      <File FileName="Business/Concrete/CityManager.cs" Line="22" Column="30" />
+      <File FileName="Business/Concrete/ImageManager.cs" Line="44" Column="1" />
+      <File FileName="Core/Entities/Concrete/City.cs" Line="7" Column="18" />
+      <File FileName="Business/Abstract/IImageService.cs" Line="19" Column="1" />
+      <File FileName="Business/Abstract/ICityService.cs" Line="4" Column="1" />
+      <File FileName="Business/Abstract/ICategoryService.cs" Line="4" Column="1" />
+      <File FileName="Core/Entities/Concrete/Vacancy.cs" Line="16" Column="1" />
+      <File FileName="Core/Entities/Concrete/Category.cs" Line="1" Column="1" />
+      <File FileName="DataAccess/Concrete/EntityFramework/Contexts/JoblyContext.cs" Line="30" Column="20" />
+      <File FileName="Core/Entities/Concrete/Image.cs" Line="8" Column="18" />
+      <File FileName="BackendJobly/Controllers/ImageController.cs" Line="12" Column="19" />
+      <File FileName="BackendJobly/Controllers/CityController.cs" Line="19" Column="17" />
+      <File FileName="BackendJobly/Program.cs" Line="20" Column="1" />
+      <File FileName="BackendJobly/Controllers/CompanyController.cs" Line="87" Column="1" />
+      <File FileName="BackendJobly/Startup.cs" Line="109" Column="141" />
+      <File FileName="Business/Concrete/CompanyManager.cs" Line="1" Column="1" />
+      <File FileName="Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" Line="82" Column="10" />
+      <File FileName="Core/Utilities/Security/Jwt/JwtHelper.cs" Line="35" Column="35" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BackendJobly" expanded="True">
+            <Node name="BackendJobly" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

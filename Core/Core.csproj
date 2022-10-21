@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataAccess\" />
+    <None Remove="Entities\" />
+    <None Remove="Extensions\" />
+    <None Remove="Utilities\" />
+    <None Remove="DataAccess\EntityFramework\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Utilities\Results\" />
+    <None Remove="Utilities\Security\" />
+    <None Remove="Utilities\Security\Encyption\" />
+    <None Remove="Utilities\Security\Hashing\" />
+    <None Remove="Utilities\Security\Jwt\" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="Entities\Concrete\" />
+    <None Remove="Microsoft.AspNetCore.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="DataAccess\EntityFramework\" />
+    <Folder Include="Utilities\Results\" />
+    <Folder Include="Utilities\Security\" />
+    <Folder Include="Utilities\Security\Encyption\" />
+    <Folder Include="Utilities\Security\Hashing\" />
+    <Folder Include="Utilities\Security\Jwt\" />
+    <Folder Include="Entities\Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.22.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.22.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+  </ItemGroup>
+</Project>
